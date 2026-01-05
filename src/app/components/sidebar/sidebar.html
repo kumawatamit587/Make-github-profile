@@ -1,0 +1,59 @@
+<aside class="profile-sidebar" *ngIf="userData$ | async as userData; ">
+    <!-- Avatar -->
+    <div class="avatar-wrapper">
+        <img class="avatar" [src]="userData.avatar_url" [alt]="userData.login" />
+        <span class="status-dot"></span>
+    </div>
+
+    <!-- Name -->
+    <h1 class="name">{{ userData.name }}</h1>
+    <p class="username">{{ userData.login }}</p>
+
+    <!-- Follow button -->
+    <button class="follow-btn">Follow</button>
+
+    <!-- Bio -->
+    <p class="bio" *ngIf="userData.bio">
+        {{ userData.bio }}
+    </p>
+
+    <!-- Followers -->
+    <div class="follow-info">
+        <strong>{{ userData.followers }}</strong> followers ·
+        <strong>{{ userData.following }}</strong> following
+    </div>
+
+    <!-- Details -->
+    <ul class="details">
+        <li *ngIf="userData.company">🏢 {{ userData.company }}</li>
+        <li *ngIf="userData.location">📍 {{ userData.location }}</li>
+
+        <li *ngIf="userData.email">✉️ {{ userData.email }}</li>
+
+        <li *ngIf="userData.blog">
+            🔗
+            <a [href]="userData.blog" target="_blank" rel="noopener">
+                {{ userData.blog }}
+            </a>
+        </li>
+
+        <li>🔗 in/shreeramkushwaha</li>
+
+        <li *ngIf="userData.twitter_username">
+            🐦 @{{ userData.twitter_username }}
+        </li>
+    </ul>
+
+    <!-- Achievements -->
+    <div class="achievements">
+        <h4>Achievements</h4>
+        <div class="badges">
+            <span class="badge">🏆</span>
+            <span class="badge">🔥</span>
+            <span class="badge">⭐</span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <a class="block-link" href="#">Block or Report</a>
+</aside>

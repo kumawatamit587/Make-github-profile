@@ -1,0 +1,39 @@
+<div class="header-wrapper" *ngIf="user$ | async as user">
+    <div class="top-bar">
+        <div class="header-container justify-between">
+            <div class="left-section">
+                <button class="icon-btn">☰</button>
+                <img src="/github-mark.svg" alt="GitHub" class="logo-svg" />
+                <span class="breadcrumb">{{ user.login }}</span>
+            </div>
+
+            <div class="right-section">
+                <div class="search-container">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Type / to search" class="search-input" />
+                </div>
+                <button class="icon-btn">➕</button>
+                <button class="icon-btn">●</button>
+                <button class="icon-btn">🔔</button>
+                <img [src]="user.avatar_url" alt="User Profile" class="header-avatar" />
+            </div>
+        </div>
+    </div>
+
+    <nav class="sub-nav">
+        <div class="header-container tab-scroll">
+            <a routerLink="/overview" routerLinkActive="active" class="tab-link">
+                <span class="icon">📖</span> Overview
+            </a>
+            <a routerLink="/repositories" routerLinkActive="active" class="tab-link">
+                <span class="icon">🗄️</span> Repositories <span class="counter">31</span>
+            </a>
+            <a routerLink="/projects" routerLinkActive="active" class="tab-link">
+                <span class="icon">📊</span> Projects
+            </a>
+            <a routerLink="/packages" routerLinkActive="active" class="tab-link">
+                <span class="icon">📦</span> Packages <span class="counter">5</span>
+            </a>
+        </div>
+    </nav>
+</div>

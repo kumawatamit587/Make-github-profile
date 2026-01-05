@@ -1,0 +1,163 @@
+/* --- Global Wrapper --- */
+.header-wrapper {
+    background-color: #f6f8fa;
+    width: 100%;
+    border-bottom: 1px solid #d0d7de;
+}
+
+/* --- Container Alignment --- */
+/* Ensures header content aligns with the Sidebar and Main Content below */
+.header-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+/* --- Top Global Bar Section --- */
+.top-bar {
+    padding: 16px 0;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-svg {
+    width: 32px;
+    height: 32px;
+}
+
+.breadcrumb {
+    font-weight: 600;
+    font-size: 14px;
+    color: #1f2328;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid #d0d7de;
+    padding: 6px 8px;
+    border-radius: 6px;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    font-size: 13px;
+}
+
+.search-input:focus {
+    width: 300px;
+    outline: none;
+    border-color: #0969da;
+    box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.3);
+}
+
+.icon-btn {
+    border: 1px solid #d0d7de;
+    background: #f6f8fa;
+    padding: 6px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.header-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #d0d7de;
+    cursor: pointer;
+}
+
+/* --- Sub-Navbar (Tabs) Section --- */
+.sub-nav {
+    /* No background-color needed here as it inherits from wrapper */
+}
+
+.tab-scroll {
+    gap: 8px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.tab-scroll::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+.tab-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px 12px 16px;
+    text-decoration: none;
+    color: #1f2328;
+    font-size: 14px;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    /* Overlaps the wrapper's border-bottom for a seamless look */
+    transition: border-bottom-color 0.2s;
+}
+
+.tab-link:hover {
+    background-color: #ebedef;
+    border-radius: 6px 6px 0 0;
+}
+
+.tab-link.active {
+    font-weight: 600;
+    border-bottom-color: #fd8c73;
+    /* GitHub orange active line */
+}
+
+.icon {
+    font-size: 16px;
+}
+
+.counter {
+    background-color: #eff1f3;
+    color: #1f2328;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* --- Responsive Media Queries --- */
+@media (max-width: 1012px) {
+    .header-container {
+        padding: 0 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        display: none;
+        /* Hides search bar on mobile like the real GitHub mobile web */
+    }
+
+    .breadcrumb {
+        font-size: 13px;
+    }
+
+    .tab-link {
+        padding: 8px 12px 12px 12px;
+        font-size: 13px;
+    }
+}

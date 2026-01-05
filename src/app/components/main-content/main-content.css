@@ -1,0 +1,25 @@
+.tab-nav {
+    display: flex;
+    border-bottom: 1px solid #d0d7de;
+    margin-bottom: 20px;
+    gap: 16px;
+}
+
+.tab-link {
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #1f2328;
+    font-size: 14px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.tab-link:hover {
+    border-bottom-color: #d0d7de;
+}
+
+.tab-link.active {
+    font-weight: 600;
+    border-bottom-color: #fd8c73;
+    /* GitHub's orange-ish active underline */
+}

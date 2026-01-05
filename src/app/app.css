@@ -1,0 +1,39 @@
+/* 1. The main container keeps everything centered with some breathing room */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* 2. This is the Flexbox magic. It forces children to sit side-by-side */
+.layout-grid {
+    display: flex;
+    flex-direction: row;
+    /* Horizontal alignment */
+    gap: 32px;
+    /* Space between sidebar and content */
+    margin-top: 24px;
+}
+
+/* 3. Give the sidebar a fixed-ish width (like GitHub) */
+.sidebar-wrapper {
+    flex: 0 0 296px;
+    /* Don't grow, don't shrink, stay at 296px */
+}
+
+/* 4. Let the main content take up all the remaining space */
+.content-wrapper {
+    flex: 1;
+    /* Grow to fill the rest of the row */
+}
+
+/* 5. Responsive: On mobile, stack them back into a vertical line */
+@media (max-width: 768px) {
+    .layout-grid {
+        flex-direction: column;
+    }
+
+    .sidebar-wrapper {
+        width: 100%;
+    }
+}
