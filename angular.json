@@ -2,7 +2,8 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "88bdcb39-4281-4207-833c-4bb5d5dae70f"
   },
   "newProjectRoot": "projects",
   "projects": {
@@ -15,24 +16,35 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "outputMode": "browser",
+            "outputMode": "static",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.css"],
             "scripts": []
-          }
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "sourceMap": false
+            },
+            "development": {
+              "optimization": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@angular/build:dev-server",
           "defaultConfiguration": "development",
           "configurations": {
             "development": {
-              "buildTarget": "Make-github-profile:build"
+              "buildTarget": "Make-github-profile:build:development"
             },
             "production": {
-              "buildTarget": "Make-github-profile:build"
+              "buildTarget": "Make-github-profile:build:production"
             }
           }
         },
