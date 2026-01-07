@@ -11,6 +11,6 @@ export default `<!doctype html>
 
 <body ngcm="">
   <app-root></app-root>
-<script src="main-DFOSH5YR.js" type="module"></script></body>
+<script src="main-CU47E4TJ.js" type="module"></script></body>
 
 </html>`;
