@@ -8,20 +8,23 @@ import { Observable } from 'rxjs';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './sidebar.html',
-  styleUrl: './sidebar.css',
+  styleUrls: ['./sidebar.css'], // ✅ FIXED
 })
 export class Sidebar implements OnInit {
-  userData$: Observable<any> | undefined; // This will hold our data
+  userData$!: Observable<any>;
+
   constructor(private githubService: GithubService) {}
 
   ngOnInit(): void {
     this.userData$ = this.githubService.getUserProfile();
+
+    // Optional debug (can remove later)
     this.githubService.getUserProfile().subscribe({
       next: (data) => {
         console.log('#---Testing---#', data);
       },
-      error: (rrr) => {
-        console.error('The error is', rrr);
+      error: (err) => {
+        console.error('The error is', err);
       },
       complete: () => console.log('Request Finished'),
     });

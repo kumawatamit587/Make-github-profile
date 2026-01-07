@@ -7,12 +7,13 @@ import { GithubService } from '../../services/github.services';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, CommonModule],
+  imports: [CommonModule, RouterLink, RouterLinkActive],
   templateUrl: './header.html',
-  styleUrl: './header.css',
+  styleUrls: ['./header.css'], // ✅ FIX (plural + array)
 })
 export class Header implements OnInit {
-  user$: Observable<any> | undefined;
+  user$!: Observable<any>;
+
   constructor(private githubService: GithubService) {}
 
   ngOnInit(): void {
