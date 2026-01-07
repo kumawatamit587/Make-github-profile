@@ -4,7 +4,7 @@ export default `<!doctype html>
 <head>
   <meta charset="utf-8">
   <title>Make-github-profile</title>
-  <base href="https://github.com/kumawatamit587/Make-github-profile/">
+  <base href="https://kumawatamit587.github.io/Make-github-profile/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="stylesheet" href="styles-5INURTSO.css"></head>
