@@ -11,6 +11,10 @@
 //     provideClientHydration(withEventReplay()),
 //   ],
 // };
-import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { ApplicationConfig } from '@angular/core';
+import { provideRouter, withHashLocation } from '@angular/router';
+import { routes } from './app.routes';
 
-providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }];
+export const appConfig: ApplicationConfig = {
+  providers: [provideRouter(routes, withHashLocation())],
+};
