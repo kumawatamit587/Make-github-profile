@@ -2,39 +2,39 @@
 export default {
   bootstrap: () => import('./main.server.mjs').then(m => m.default),
   inlineCriticalCss: true,
-  baseHref: 'https://kumawatamit587.github.io/Make-github-profile/',
+  baseHref: '/',
   locale: undefined,
   routes: [
   {
     "renderMode": 2,
-    "redirectTo": "/Make-github-profile/overview",
-    "route": "/Make-github-profile"
+    "redirectTo": "/overview",
+    "route": "/"
   },
   {
     "renderMode": 2,
-    "route": "/Make-github-profile/overview"
+    "route": "/overview"
   },
   {
     "renderMode": 2,
-    "route": "/Make-github-profile/repositories"
+    "route": "/repositories"
   },
   {
     "renderMode": 2,
-    "route": "/Make-github-profile/projects"
+    "route": "/projects"
   },
   {
     "renderMode": 2,
-    "route": "/Make-github-profile/packages"
+    "route": "/packages"
   }
 ],
   entryPointToBrowserMapping: undefined,
   assets: {
-    'index.csr.html': {size: 498, hash: '0668ec28256e960dedee594511329c876dcd75e6b0d94c215a809efcd4929a7f', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
-    'index.server.html': {size: 1011, hash: '8902b2413089e321bb841254cab12639a6a82dea940f42dacecee7fd7e12f5ce', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
-    'repositories/index.html': {size: 5769, hash: 'f4be09ba979777909d9d65cab8b219c621f03d7fd1440512a89be669bedef5e8', text: () => import('./assets-chunks/repositories_index_html.mjs').then(m => m.default)},
-    'projects/index.html': {size: 5758, hash: 'f2533d4bc14f77e7a70e3a6ebed8471ad1b24ce96475c52c4305288846c7b5bf', text: () => import('./assets-chunks/projects_index_html.mjs').then(m => m.default)},
-    'packages/index.html': {size: 5758, hash: 'af0d0cd9dd6e8a20209f8c6f6e2b7a37a7e6445b5fae230a7feaa23c97416f98', text: () => import('./assets-chunks/packages_index_html.mjs').then(m => m.default)},
-    'overview/index.html': {size: 8037, hash: '3151df07cca787c70a4844d15efecb7ce48f8e75a17eb3b91882681a3f6a8b67', text: () => import('./assets-chunks/overview_index_html.mjs').then(m => m.default)},
+    'index.csr.html': {size: 446, hash: '3930b399fe9429930c74ce36028f8068de189047e9d54899d88e4d9693e9271c', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
+    'index.server.html': {size: 959, hash: '2e408fc8426dd661febee6a1542fa50f7afca3c245e7124f7e192b53996d4850', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
+    'projects/index.html': {size: 255, hash: '0b5f4c0b5ae187e5614f7b8a74c631b5f6bdee78e63234de1cd5ca636903dd98', text: () => import('./assets-chunks/projects_index_html.mjs').then(m => m.default)},
+    'overview/index.html': {size: 255, hash: '0b5f4c0b5ae187e5614f7b8a74c631b5f6bdee78e63234de1cd5ca636903dd98', text: () => import('./assets-chunks/overview_index_html.mjs').then(m => m.default)},
+    'packages/index.html': {size: 255, hash: '0b5f4c0b5ae187e5614f7b8a74c631b5f6bdee78e63234de1cd5ca636903dd98', text: () => import('./assets-chunks/packages_index_html.mjs').then(m => m.default)},
+    'repositories/index.html': {size: 255, hash: '0b5f4c0b5ae187e5614f7b8a74c631b5f6bdee78e63234de1cd5ca636903dd98', text: () => import('./assets-chunks/repositories_index_html.mjs').then(m => m.default)},
     'styles-5INURTSO.css': {size: 0, hash: 'menYUTfbRu8', text: () => import('./assets-chunks/styles-5INURTSO_css.mjs').then(m => m.default)}
   },
 };

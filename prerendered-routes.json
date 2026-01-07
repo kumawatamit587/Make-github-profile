@@ -1,9 +1,9 @@
 {
   "routes": {
-    "/Make-github-profile": {},
-    "/Make-github-profile/overview": {},
-    "/Make-github-profile/packages": {},
-    "/Make-github-profile/projects": {},
-    "/Make-github-profile/repositories": {}
+    "/": {},
+    "/overview": {},
+    "/packages": {},
+    "/projects": {},
+    "/repositories": {}
   }
 }

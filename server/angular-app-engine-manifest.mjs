@@ -1,6 +1,6 @@
 
 export default {
-  basePath: 'https://kumawatamit587.github.io/Make-github-profile',
+  basePath: '/',
   supportedLocales: {
   "en-US": ""
 },
